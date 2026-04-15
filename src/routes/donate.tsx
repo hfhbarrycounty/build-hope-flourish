@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import AnimatedSection from "../components/AnimatedSection";
 import { Heart, Home, HardHat, Gift } from "lucide-react";
-import paintingInterior from "../assets/painting-interior.jpg";
+import donateBanner from "../assets/donate-banner.jpg";
 
 export const Route = createFileRoute("/donate")({
   head: () => ({
@@ -19,7 +19,7 @@ function DonatePage() {
   return (
     <>
       <section className="relative h-[40vh] min-h-[300px] overflow-hidden">
-        <img src={paintingInterior} alt="Volunteer painting inside a new home" className="h-full w-full object-cover object-top" width={1920} height={1080} />
+        <img src={donateBanner} alt="Volunteers building a home together at golden hour" className="h-full w-full object-cover object-center" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 to-foreground/20" />
         <div className="absolute inset-0 flex items-end">
           <div className="mx-auto w-full max-w-7xl px-4 pb-12">
