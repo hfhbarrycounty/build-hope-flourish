@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import AnimatedSection from "../components/AnimatedSection";
-import hero9 from "@/assets/hero-9.jpg";
-import hero4 from "@/assets/hero-4.jpg";
+
+const PLACEHOLDER_HERO = "https://placehold.co/1920x1080/0d8f95/ffffff?text=What+We+Do";
+const PLACEHOLDER_HOME = "https://placehold.co/800x600/c4d600/333333?text=Completed+Home";
 
 export const Route = createFileRoute("/what-we-do")({
   head: () => ({
@@ -19,7 +20,7 @@ function WhatWeDoPage() {
   return (
     <>
       <section className="relative h-[40vh] min-h-[300px] overflow-hidden">
-        <img src={hero9} alt="Home construction" className="h-full w-full object-cover" width={1920} height={1080} />
+        <img src={PLACEHOLDER_HERO} alt="Home construction" className="h-full w-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 to-foreground/20" />
         <div className="absolute inset-0 flex items-end">
           <div className="mx-auto w-full max-w-7xl px-4 pb-12">
@@ -33,7 +34,6 @@ function WhatWeDoPage() {
 
       <section className="px-4 py-20">
         <div className="mx-auto max-w-5xl">
-          {/* Home Program */}
           <AnimatedSection>
             <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
               <div>
@@ -58,12 +58,11 @@ function WhatWeDoPage() {
                 </div>
               </div>
               <div className="overflow-hidden rounded-2xl shadow-brand-lg">
-                <img src={hero4} alt="Completed Habitat home" className="h-full w-full object-cover" loading="lazy" width={1920} height={1080} />
+                <img src={PLACEHOLDER_HOME} alt="Completed Habitat home" className="h-full w-full object-cover" loading="lazy" width={800} height={600} />
               </div>
             </div>
           </AnimatedSection>
 
-          {/* Construction */}
           <AnimatedSection delay={0.1}>
             <div className="mt-24">
               <span className="inline-block rounded-full bg-accent/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent-foreground">Construction</span>
