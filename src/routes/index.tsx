@@ -75,7 +75,7 @@ function NewsCarousel() {
       >
         {newsItems.map((item, i) => (
           <AnimatedSection key={item.title} delay={i * 0.08}>
-            <div className="group w-[340px] flex-shrink-0 overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-brand">
+            <Link to="/news/$slug" params={{ slug: item.slug }} className="group block w-[340px] flex-shrink-0 overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-brand">
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={item.image}
@@ -92,10 +92,11 @@ function NewsCarousel() {
                 </div>
               </div>
               <div className="p-5">
-                <h3 className="font-heading text-lg font-bold text-foreground line-clamp-2">{item.title}</h3>
+                <h3 className="font-heading text-lg font-bold text-foreground line-clamp-2 group-hover:text-primary transition-colors">{item.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground line-clamp-3">{item.excerpt}</p>
+                <span className="mt-3 inline-block text-xs font-semibold text-primary">Read more →</span>
               </div>
-            </div>
+            </Link>
           </AnimatedSection>
         ))}
       </div>
