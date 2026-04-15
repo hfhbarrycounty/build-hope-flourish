@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import AnimatedSection from "../components/AnimatedSection";
-import { Clock, MapPin, Phone } from "lucide-react";
+import { Clock, MapPin, Phone, Mail } from "lucide-react";
 
 const PLACEHOLDER_HERO = "https://placehold.co/1920x1080/c4d600/333333?text=ReStore";
 
@@ -75,6 +75,10 @@ function RestorePage() {
                   <div className="mt-2 flex items-center gap-2 text-sm text-muted-foreground">
                     <Phone className="h-4 w-4" />
                     <a href="tel:2699489998" className="hover:text-foreground">(269) 948-9998</a>
+                  </div>
+                  <div className="mt-2 flex items-center gap-2 text-sm text-muted-foreground">
+                    <Mail className="h-4 w-4" />
+                    <a href="mailto:restore@HastingsReStore.org" className="hover:text-foreground">restore@HastingsReStore.org</a>
                   </div>
                 </div>
               </div>
