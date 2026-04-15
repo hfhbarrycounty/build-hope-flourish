@@ -39,7 +39,7 @@ export default function HeroSlideshow() {
 
   return (
     <section className="relative h-[85vh] min-h-[500px] overflow-hidden">
-      <AnimatePresence mode="popLayout" custom={direction}>
+      <AnimatePresence initial={false}>
         <motion.img
           key={current}
           src={slides[current].src}
@@ -47,10 +47,11 @@ export default function HeroSlideshow() {
           className="absolute inset-0 h-full w-full object-cover"
           width={1920}
           height={1080}
-          initial={{ opacity: 0, scale: 1.1 }}
+          initial={{ opacity: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          transition={{ opacity: { duration: 1.5, ease: "easeInOut" }, scale: { duration: 8, ease: "linear" } }}
+          style={{ scale: 1.05 }}
         />
       </AnimatePresence>
 

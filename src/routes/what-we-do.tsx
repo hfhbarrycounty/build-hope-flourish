@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import AnimatedSection from "../components/AnimatedSection";
-import volunteersMeasuring from "../assets/volunteers-measuring.jpg";
+import volunteerFraming from "../assets/volunteer-framing.jpg";
 import gasLineWork from "../assets/gas-line-work.jpg";
 
 export const Route = createFileRoute("/what-we-do")({
@@ -19,7 +19,7 @@ function WhatWeDoPage() {
   return (
     <>
       <section className="relative h-[40vh] min-h-[300px] overflow-hidden">
-        <img src={volunteersMeasuring} alt="Volunteers measuring materials on site" className="h-full w-full object-cover object-top" width={1920} height={1080} />
+        <img src={volunteerFraming} alt="Volunteers framing a house at the build site" className="h-full w-full object-cover object-center" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 to-foreground/20" />
         <div className="absolute inset-0 flex items-end">
           <div className="mx-auto w-full max-w-7xl px-4 pb-12">

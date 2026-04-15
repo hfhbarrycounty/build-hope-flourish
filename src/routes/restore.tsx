@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import AnimatedSection from "../components/AnimatedSection";
 import { Clock, MapPin, Phone, Mail } from "lucide-react";
-import restoreGroup from "../assets/restore-group.jpg";
+import restoreBuilding from "../assets/restore-building.jpg";
 
 export const Route = createFileRoute("/restore")({
   head: () => ({
@@ -19,7 +19,7 @@ function RestorePage() {
   return (
     <>
       <section className="relative h-[40vh] min-h-[300px] overflow-hidden">
-        <img src={restoreGroup} alt="Volunteer team at the Habitat ReStore" className="h-full w-full object-cover" width={1920} height={1080} />
+        <img src={restoreBuilding} alt="Habitat for Humanity ReStore building at 1215 N Broadway" className="h-full w-full object-cover object-center" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 to-foreground/20" />
         <div className="absolute inset-0 flex items-end">
           <div className="mx-auto w-full max-w-7xl px-4 pb-12">
