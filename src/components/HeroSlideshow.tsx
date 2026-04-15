@@ -2,18 +2,20 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-// Placeholder slides — replace src values with real images later
+import heroGroupBuild from "../assets/hero-group-build.jpg";
+import porchHammer from "../assets/porch-hammer.jpg";
+import groupPorch from "../assets/group-porch.jpg";
+import houseExterior from "../assets/house-exterior.jpg";
+import restoreGroup from "../assets/restore-group.jpg";
+import rooflineCrew from "../assets/roofline-crew.jpg";
+
 const slides = [
-  { src: "https://placehold.co/1920x1080/00afb7/ffffff?text=Slide+1", alt: "Habitat for Humanity Barry County" },
-  { src: "https://placehold.co/1920x1080/0d8f95/ffffff?text=Slide+2", alt: "Community building" },
-  { src: "https://placehold.co/1920x1080/c4d600/333333?text=Slide+3", alt: "Volunteers at work" },
-  { src: "https://placehold.co/1920x1080/00afb7/ffffff?text=Slide+4", alt: "Home construction" },
-  { src: "https://placehold.co/1920x1080/0d8f95/ffffff?text=Slide+5", alt: "Family with new home" },
-  { src: "https://placehold.co/1920x1080/c4d600/333333?text=Slide+6", alt: "ReStore" },
-  { src: "https://placehold.co/1920x1080/00afb7/ffffff?text=Slide+7", alt: "Volunteer group" },
-  { src: "https://placehold.co/1920x1080/0d8f95/ffffff?text=Slide+8", alt: "Home dedication" },
-  { src: "https://placehold.co/1920x1080/c4d600/333333?text=Slide+9", alt: "Roofing work" },
-  { src: "https://placehold.co/1920x1080/00afb7/ffffff?text=Slide+10", alt: "Neighborhood" },
+  { src: heroGroupBuild, alt: "Volunteer group at build site" },
+  { src: houseExterior, alt: "Home #45 under construction" },
+  { src: restoreGroup, alt: "Bradford White team at the ReStore" },
+  { src: porchHammer, alt: "Volunteer on the front porch" },
+  { src: groupPorch, alt: "Build team on the porch" },
+  { src: rooflineCrew, alt: "Crew working on the roofline" },
 ];
 
 export default function HeroSlideshow() {
