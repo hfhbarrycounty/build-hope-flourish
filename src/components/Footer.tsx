@@ -40,7 +40,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-3">
               <a
-                href="https://www.facebook.com/HabitatBarryCounty"
+                href="https://www.facebook.com/Habitat.Barry"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/20 transition-colors hover:bg-primary/40"
@@ -49,7 +49,7 @@ export default function Footer() {
                 <FacebookIcon className="h-5 w-5" />
               </a>
               <a
-                href="https://x.com"
+                href="https://x.com/Habitat_org"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/20 transition-colors hover:bg-primary/40"
@@ -110,12 +110,12 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-primary-foreground/10 pt-8 text-xs opacity-50 sm:flex-row">
-          <p>© 2026 Barry County Habitat For Humanity &nbsp;|&nbsp; ALL RIGHTS RESERVED &nbsp;|&nbsp; CREATED BY JPIXEL</p>
+          <p>© 2026 Barry County Habitat For Humanity &nbsp;|&nbsp; ALL RIGHTS RESERVED &nbsp;|&nbsp; CREATED BY iFixTech</p>
           <div className="flex items-center gap-4">
-            <a href="https://www.facebook.com/HabitatBarryCounty" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
+            <a href="https://www.facebook.com/Habitat.Barry" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
               <FacebookIcon className="h-4 w-4" />
             </a>
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
+            <a href="https://x.com/Habitat_org" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
               <XIcon className="h-3.5 w-3.5" />
             </a>
           </div>
