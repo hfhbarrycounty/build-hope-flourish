@@ -1,28 +1,19 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import hero1 from "@/assets/hero-1.jpg";
-import hero2 from "@/assets/hero-2.jpg";
-import hero3 from "@/assets/hero-3.jpg";
-import hero4 from "@/assets/hero-4.jpg";
-import hero5 from "@/assets/hero-5.jpg";
-import hero6 from "@/assets/hero-6.jpg";
-import hero7 from "@/assets/hero-7.jpg";
-import hero8 from "@/assets/hero-8.jpg";
-import hero9 from "@/assets/hero-9.jpg";
-import hero10 from "@/assets/hero-10.jpg";
 
+// Placeholder slides — replace src values with real images later
 const slides = [
-  { src: hero1, alt: "Volunteers building a home" },
-  { src: hero2, alt: "Family with new home keys" },
-  { src: hero3, alt: "Community construction" },
-  { src: hero4, alt: "Completed Habitat home" },
-  { src: hero5, alt: "Volunteers painting" },
-  { src: hero6, alt: "Habitat ReStore" },
-  { src: hero7, alt: "Volunteer group photo" },
-  { src: hero8, alt: "Home dedication ceremony" },
-  { src: hero9, alt: "Roofing construction" },
-  { src: hero10, alt: "Neighborhood homes" },
+  { src: "https://placehold.co/1920x1080/00afb7/ffffff?text=Slide+1", alt: "Habitat for Humanity Barry County" },
+  { src: "https://placehold.co/1920x1080/0d8f95/ffffff?text=Slide+2", alt: "Community building" },
+  { src: "https://placehold.co/1920x1080/c4d600/333333?text=Slide+3", alt: "Volunteers at work" },
+  { src: "https://placehold.co/1920x1080/00afb7/ffffff?text=Slide+4", alt: "Home construction" },
+  { src: "https://placehold.co/1920x1080/0d8f95/ffffff?text=Slide+5", alt: "Family with new home" },
+  { src: "https://placehold.co/1920x1080/c4d600/333333?text=Slide+6", alt: "ReStore" },
+  { src: "https://placehold.co/1920x1080/00afb7/ffffff?text=Slide+7", alt: "Volunteer group" },
+  { src: "https://placehold.co/1920x1080/0d8f95/ffffff?text=Slide+8", alt: "Home dedication" },
+  { src: "https://placehold.co/1920x1080/c4d600/333333?text=Slide+9", alt: "Roofing work" },
+  { src: "https://placehold.co/1920x1080/00afb7/ffffff?text=Slide+10", alt: "Neighborhood" },
 ];
 
 export default function HeroSlideshow() {

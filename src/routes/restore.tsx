@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import AnimatedSection from "../components/AnimatedSection";
-import hero6 from "@/assets/hero-6.jpg";
 import { Clock, MapPin, Phone } from "lucide-react";
+
+const PLACEHOLDER_HERO = "https://placehold.co/1920x1080/c4d600/333333?text=ReStore";
 
 export const Route = createFileRoute("/restore")({
   head: () => ({
@@ -19,7 +20,7 @@ function RestorePage() {
   return (
     <>
       <section className="relative h-[40vh] min-h-[300px] overflow-hidden">
-        <img src={hero6} alt="Habitat ReStore" className="h-full w-full object-cover" width={1920} height={1080} />
+        <img src={PLACEHOLDER_HERO} alt="Habitat ReStore" className="h-full w-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 to-foreground/20" />
         <div className="absolute inset-0 flex items-end">
           <div className="mx-auto w-full max-w-7xl px-4 pb-12">
