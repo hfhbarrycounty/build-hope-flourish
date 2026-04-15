@@ -2,7 +2,7 @@ import paintingInterior from "../assets/painting-interior.jpg";
 import interiorTrim from "../assets/interior-trim.jpg";
 import heroGroupBuild from "../assets/hero-group-build.jpg";
 import houseExterior from "../assets/house-exterior.jpg";
-import porchHammer from "../assets/porch-hammer.jpg";
+import lakeTrustTeam from "../assets/lake-trust-team.jpg";
 
 export interface NewsItem {
   slug: string;
