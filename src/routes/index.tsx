@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import HeroSlideshow from "../components/HeroSlideshow";
 import AnimatedSection from "../components/AnimatedSection";
 import { Home, Users, HardHat, Heart, ChevronDown, ChevronLeft, ChevronRight, Calendar } from "lucide-react";
@@ -8,11 +8,7 @@ import pillarShelter from "../assets/pillar-shelter.png";
 import pillarStrength from "../assets/pillar-strength.png";
 import pillarStability from "../assets/pillar-stability.png";
 import pillarSelfReliance from "../assets/pillar-self-reliance.png";
-import paintingInterior from "../assets/painting-interior.jpg";
-import interiorTrim from "../assets/interior-trim.jpg";
-import heroGroupBuild from "../assets/hero-group-build.jpg";
-import houseExterior from "../assets/house-exterior.jpg";
-import porchHammer from "../assets/porch-hammer.jpg";
+import { newsItems } from "../lib/news";
 
 export const Route = createFileRoute("/")({
   component: Index,
