@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import HeroSlideshow from "../components/HeroSlideshow";
 import AnimatedSection from "../components/AnimatedSection";
 import { Home, Users, HardHat, Heart, ChevronDown, ChevronLeft, ChevronRight, Calendar } from "lucide-react";
@@ -8,11 +8,7 @@ import pillarShelter from "../assets/pillar-shelter.png";
 import pillarStrength from "../assets/pillar-strength.png";
 import pillarStability from "../assets/pillar-stability.png";
 import pillarSelfReliance from "../assets/pillar-self-reliance.png";
-import paintingInterior from "../assets/painting-interior.jpg";
-import interiorTrim from "../assets/interior-trim.jpg";
-import heroGroupBuild from "../assets/hero-group-build.jpg";
-import houseExterior from "../assets/house-exterior.jpg";
-import porchHammer from "../assets/porch-hammer.jpg";
+import { newsItems } from "../lib/news";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -23,39 +19,6 @@ const stats = [
   { icon: Users, value: "35+", label: "Years Serving" },
   { icon: HardHat, value: "1000+", label: "Volunteers" },
   { icon: Heart, value: "100%", label: "Volunteer-Driven" },
-];
-
-const newsItems = [
-  {
-    title: "Painting and Trim Underway!",
-    date: "January 20, 2026",
-    excerpt: "Cabinets and flooring installed — Home #45 is really looking close to done! Interior painting is wrapping up and trim work has begun.",
-    image: paintingInterior,
-  },
-  {
-    title: "Construction Update: Home #45",
-    date: "December 16, 2025",
-    excerpt: "The fourth green inspection sticker has been placed, marking a major milestone in the construction of our newest home.",
-    image: interiorTrim,
-  },
-  {
-    title: "Volunteers Rally for Framing",
-    date: "November 8, 2025",
-    excerpt: "An incredible turnout of community volunteers came together to help with framing and exterior work on the build site.",
-    image: heroGroupBuild,
-  },
-  {
-    title: "House #45 Taking Shape",
-    date: "October 30, 2025",
-    excerpt: "Exterior siding and roofing are nearly complete. The house is really starting to look like a home!",
-    image: houseExterior,
-  },
-  {
-    title: "Lake Trust Gift Received",
-    date: "March 17, 2025",
-    excerpt: "A generous $23,455 donation from Lake Trust Credit Union's Home Loan Giveback program to support our mission.",
-    image: porchHammer,
-  },
 ];
 
 const pillars = [
@@ -112,7 +75,7 @@ function NewsCarousel() {
       >
         {newsItems.map((item, i) => (
           <AnimatedSection key={item.title} delay={i * 0.08}>
-            <div className="group w-[340px] flex-shrink-0 overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-brand">
+            <Link to="/news/$slug" params={{ slug: item.slug }} className="group block w-[340px] flex-shrink-0 overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-brand">
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={item.image}
@@ -129,10 +92,11 @@ function NewsCarousel() {
                 </div>
               </div>
               <div className="p-5">
-                <h3 className="font-heading text-lg font-bold text-foreground line-clamp-2">{item.title}</h3>
+                <h3 className="font-heading text-lg font-bold text-foreground line-clamp-2 group-hover:text-primary transition-colors">{item.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground line-clamp-3">{item.excerpt}</p>
+                <span className="mt-3 inline-block text-xs font-semibold text-primary">Read more →</span>
               </div>
-            </div>
+            </Link>
           </AnimatedSection>
         ))}
       </div>
