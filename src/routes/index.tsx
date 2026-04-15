@@ -21,39 +21,6 @@ const stats = [
   { icon: Heart, value: "100%", label: "Volunteer-Driven" },
 ];
 
-const newsItems = [
-  {
-    title: "Painting and Trim Underway!",
-    date: "January 20, 2026",
-    excerpt: "Cabinets and flooring installed — Home #45 is really looking close to done! Interior painting is wrapping up and trim work has begun.",
-    image: paintingInterior,
-  },
-  {
-    title: "Construction Update: Home #45",
-    date: "December 16, 2025",
-    excerpt: "The fourth green inspection sticker has been placed, marking a major milestone in the construction of our newest home.",
-    image: interiorTrim,
-  },
-  {
-    title: "Volunteers Rally for Framing",
-    date: "November 8, 2025",
-    excerpt: "An incredible turnout of community volunteers came together to help with framing and exterior work on the build site.",
-    image: heroGroupBuild,
-  },
-  {
-    title: "House #45 Taking Shape",
-    date: "October 30, 2025",
-    excerpt: "Exterior siding and roofing are nearly complete. The house is really starting to look like a home!",
-    image: houseExterior,
-  },
-  {
-    title: "Lake Trust Gift Received",
-    date: "March 17, 2025",
-    excerpt: "A generous $23,455 donation from Lake Trust Credit Union's Home Loan Giveback program to support our mission.",
-    image: porchHammer,
-  },
-];
-
 const pillars = [
   { img: pillarShelter, title: "Shelter", desc: "Safe, affordable housing for families in need" },
   { img: pillarStrength, title: "Strength", desc: "Empowering families through homeownership" },
