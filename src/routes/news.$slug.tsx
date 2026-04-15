@@ -43,7 +43,7 @@ function NewsArticlePage() {
     <>
       {/* Hero */}
       <section className="relative h-[45vh] min-h-[350px] overflow-hidden">
-        <img src={item.image} alt={item.title} className="h-full w-full object-cover" width={1920} height={1080} />
+        <img src={item.image} alt={item.title} className="h-full w-full object-cover" style={{ objectPosition: "center 30%" }} width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/40 to-foreground/10" />
         <div className="absolute inset-0 flex items-end">
           <div className="mx-auto w-full max-w-4xl px-4 pb-12">

@@ -2,7 +2,7 @@ import paintingInterior from "../assets/painting-interior.jpg";
 import interiorTrim from "../assets/interior-trim.jpg";
 import heroGroupBuild from "../assets/hero-group-build.jpg";
 import houseExterior from "../assets/house-exterior.jpg";
-import porchHammer from "../assets/porch-hammer.jpg";
+import lakeTrustTeam from "../assets/lake-trust-team.jpg";
 
 export interface NewsItem {
   slug: string;
@@ -71,7 +71,7 @@ Next up: electrical, plumbing, and HVAC rough-ins will begin, followed by insula
     title: "Lake Trust Gift Received",
     date: "March 17, 2025",
     excerpt: "A generous $23,455 donation from Lake Trust Credit Union's Home Loan Giveback program to support our mission.",
-    image: porchHammer,
+    image: lakeTrustTeam,
     body: `We are thrilled and grateful to announce that Lake Trust Credit Union has donated $23,455 to Habitat for Humanity Barry County through their Home Loan Giveback program!
 
 This generous gift will go directly toward building homes for families in need in Barry County. Lake Trust Credit Union has been a wonderful partner in our mission, and this donation represents their commitment to helping families achieve the dream of homeownership.
