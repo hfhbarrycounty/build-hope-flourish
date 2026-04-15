@@ -1,7 +1,7 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { to: "/" as const, label: "Home" },
@@ -17,28 +17,6 @@ export default function Header() {
   const location = useLocation();
 
   return (
-    <>
-      {/* Top bar */}
-      <div className="bg-primary">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-sm text-primary-foreground">
-          <div className="flex items-center gap-4">
-            <a href="tel:2699489939" className="flex items-center gap-1 transition-opacity hover:opacity-80">
-              <Phone className="h-3.5 w-3.5" />
-              <span className="hidden sm:inline">Office:</span> (269) 948-9939
-            </a>
-            <a href="tel:2699489998" className="flex items-center gap-1 transition-opacity hover:opacity-80">
-              <Phone className="h-3.5 w-3.5" />
-              <span className="hidden sm:inline">ReStore:</span> (269) 948-9998
-            </a>
-          </div>
-          <a href="mailto:office@hfhbarrycounty.org" className="flex items-center gap-1 transition-opacity hover:opacity-80">
-            <Mail className="h-3.5 w-3.5" />
-            <span className="hidden sm:inline">office@hfhbarrycounty.org</span>
-          </a>
-        </div>
-      </div>
-
-      {/* Main nav */}
       <motion.header
         className="sticky top-0 z-50 border-b border-border bg-card/95 backdrop-blur-md"
         initial={{ y: -100 }}
@@ -141,6 +119,5 @@ export default function Header() {
           )}
         </AnimatePresence>
       </motion.header>
-    </>
   );
 }

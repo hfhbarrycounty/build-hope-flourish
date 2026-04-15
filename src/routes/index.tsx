@@ -1,7 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import HeroSlideshow from "../components/HeroSlideshow";
 import AnimatedSection from "../components/AnimatedSection";
-import { Home, HardHat, Heart, Users } from "lucide-react";
+import { Home, Users, HardHat, Heart, ChevronDown } from "lucide-react";
+import { motion } from "framer-motion";
+import pillarShelter from "../assets/pillar-shelter.png";
+import pillarStrength from "../assets/pillar-strength.png";
+import pillarStability from "../assets/pillar-stability.png";
+import pillarSelfReliance from "../assets/pillar-self-reliance.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -10,8 +15,8 @@ export const Route = createFileRoute("/")({
 const stats = [
   { icon: Home, value: "44+", label: "Homes Built" },
   { icon: Users, value: "35+", label: "Years Serving" },
-  { icon: HardHat, value: "1000s", label: "Volunteers" },
-  { icon: Heart, value: "$500", label: "Down Payment" },
+  { icon: HardHat, value: "1000+", label: "Volunteers" },
+  { icon: Heart, value: "100%", label: "Volunteer-Driven" },
 ];
 
 const newsItems = [
@@ -30,6 +35,13 @@ const newsItems = [
     date: "March 17, 2025",
     excerpt: "A generous $23,455 donation from Lake Trust Credit Union's Home Loan Giveback program.",
   },
+];
+
+const pillars = [
+  { img: pillarShelter, title: "Shelter", desc: "Safe, affordable housing for families in need" },
+  { img: pillarStrength, title: "Strength", desc: "Empowering families through homeownership" },
+  { img: pillarStability, title: "Stability", desc: "Building a foundation for family growth" },
+  { img: pillarSelfReliance, title: "Self-Reliance", desc: "Keys to independence and opportunity" },
 ];
 
 function Index() {
@@ -54,7 +66,7 @@ function Index() {
         </div>
       </section>
 
-      {/* Mission + Events */}
+      {/* Mission + Events/News */}
       <section className="px-4 py-24">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-16 lg:grid-cols-5">
@@ -86,40 +98,67 @@ function Index() {
                     Our Programs
                   </a>
                 </div>
+                {/* Animated down arrow */}
+                <div className="mt-10 flex justify-center">
+                  <motion.div
+                    animate={{ y: [0, 10, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                    className="text-primary/60"
+                  >
+                    <ChevronDown className="h-8 w-8" />
+                  </motion.div>
+                </div>
               </AnimatedSection>
             </div>
 
-            {/* Events sidebar - right 2 cols */}
+            {/* Events & News sidebar - right 2 cols */}
             <div className="lg:col-span-2">
               <AnimatedSection delay={0.2}>
-                <div className="rounded-2xl border border-border bg-card p-6">
-                  <div className="flex items-center justify-between">
-                    <h3 className="font-heading text-lg font-bold text-foreground">Latest News & Events</h3>
+                <div className="rounded-2xl border border-border bg-card p-6 space-y-6">
+                  {/* Events section */}
+                  <div>
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className="inline-flex items-center rounded-full bg-primary/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">
+                        📅 Events
+                      </span>
+                    </div>
                     <a
-                      href="https://www.facebook.com/HabitatBarryCounty"
+                      href="https://www.facebook.com/events/949489477586902"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary transition-colors hover:bg-primary/20"
+                      className="block rounded-xl bg-gradient-brand-subtle p-4 transition-all hover:shadow-brand hover:-translate-y-0.5"
                     >
-                      Facebook Events →
-                    </a>
-                  </div>
-
-                  <div className="mt-6 space-y-5">
-                    {/* Dedication event */}
-                    <div className="rounded-xl bg-gradient-brand-subtle p-4">
                       <span className="inline-block rounded-full bg-primary/20 px-2.5 py-0.5 text-xs font-semibold text-primary">Upcoming</span>
                       <h4 className="mt-2 font-heading font-semibold text-foreground">House #45 Dedication</h4>
                       <p className="mt-1 text-sm text-muted-foreground">February 25, 2026 at 7 PM — 1201 N Broadway, Hastings</p>
-                    </div>
+                      <span className="mt-2 inline-block text-xs font-semibold text-primary">View on Facebook →</span>
+                    </a>
+                    <a
+                      href="https://www.facebook.com/Habitat.Barry/events"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary transition-colors hover:bg-primary/20"
+                    >
+                      See All Events on Facebook →
+                    </a>
+                  </div>
 
-                    {newsItems.map((item) => (
-                      <div key={item.title} className="border-b border-border pb-4 last:border-0 last:pb-0">
-                        <div className="text-xs text-muted-foreground">{item.date}</div>
-                        <h4 className="mt-1 font-heading font-semibold text-foreground">{item.title}</h4>
-                        <p className="mt-1 text-sm text-muted-foreground">{item.excerpt}</p>
-                      </div>
-                    ))}
+                  {/* News section */}
+                  <div>
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className="inline-flex items-center rounded-full bg-accent/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent-foreground">
+                        📰 News
+                      </span>
+                    </div>
+                    <div className="space-y-4">
+                      {newsItems.map((item) => (
+                        <div key={item.title} className="border-b border-border pb-4 last:border-0 last:pb-0">
+                          <div className="text-xs text-muted-foreground">{item.date}</div>
+                          <h4 className="mt-1 font-heading font-semibold text-foreground">{item.title}</h4>
+                          <p className="mt-1 text-sm text-muted-foreground">{item.excerpt}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </AnimatedSection>
@@ -143,16 +182,11 @@ function Index() {
           </AnimatedSection>
 
           <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { icon: "🏠", title: "Shelter", desc: "Safe, affordable housing for families in need" },
-              { icon: "💪", title: "Strength", desc: "Empowering families through homeownership" },
-              { icon: "🧱", title: "Stability", desc: "Building a foundation for family growth" },
-              { icon: "🔑", title: "Self-Reliance", desc: "Keys to independence and opportunity" },
-            ].map((pillar, i) => (
+            {pillars.map((pillar, i) => (
               <AnimatedSection key={pillar.title} delay={i * 0.1}>
                 <div className="group rounded-2xl bg-card p-8 text-center shadow-sm transition-all hover:-translate-y-2 hover:shadow-brand">
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-3xl transition-transform group-hover:scale-110">
-                    {pillar.icon}
+                  <div className="mx-auto flex h-20 w-20 items-center justify-center transition-transform group-hover:scale-110">
+                    <img src={pillar.img} alt={pillar.title} className="h-20 w-20 object-contain" />
                   </div>
                   <h3 className="mt-5 font-heading text-xl font-bold text-foreground">{pillar.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{pillar.desc}</p>
