@@ -1,12 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import HeroSlideshow from "../components/HeroSlideshow";
 import AnimatedSection from "../components/AnimatedSection";
-import { Home, Users, HardHat, Heart, ChevronDown } from "lucide-react";
+import { Home, Users, HardHat, Heart, ChevronDown, ChevronLeft, ChevronRight, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
+import { useRef, useState } from "react";
 import pillarShelter from "../assets/pillar-shelter.png";
 import pillarStrength from "../assets/pillar-strength.png";
 import pillarStability from "../assets/pillar-stability.png";
 import pillarSelfReliance from "../assets/pillar-self-reliance.png";
+import paintingInterior from "../assets/painting-interior.jpg";
+import interiorTrim from "../assets/interior-trim.jpg";
+import heroGroupBuild from "../assets/hero-group-build.jpg";
+import houseExterior from "../assets/house-exterior.jpg";
+import porchHammer from "../assets/porch-hammer.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -23,17 +29,32 @@ const newsItems = [
   {
     title: "Painting and Trim Underway!",
     date: "January 20, 2026",
-    excerpt: "Cabinets and flooring installed — Home #45 is really looking close to done!",
+    excerpt: "Cabinets and flooring installed — Home #45 is really looking close to done! Interior painting is wrapping up and trim work has begun.",
+    image: paintingInterior,
   },
   {
     title: "Construction Update: Home #45",
     date: "December 16, 2025",
-    excerpt: "The fourth green inspection sticker has been placed, marking a major milestone.",
+    excerpt: "The fourth green inspection sticker has been placed, marking a major milestone in the construction of our newest home.",
+    image: interiorTrim,
+  },
+  {
+    title: "Volunteers Rally for Framing",
+    date: "November 8, 2025",
+    excerpt: "An incredible turnout of community volunteers came together to help with framing and exterior work on the build site.",
+    image: heroGroupBuild,
+  },
+  {
+    title: "House #45 Taking Shape",
+    date: "October 30, 2025",
+    excerpt: "Exterior siding and roofing are nearly complete. The house is really starting to look like a home!",
+    image: houseExterior,
   },
   {
     title: "Lake Trust Gift Received",
     date: "March 17, 2025",
-    excerpt: "A generous $23,455 donation from Lake Trust Credit Union's Home Loan Giveback program.",
+    excerpt: "A generous $23,455 donation from Lake Trust Credit Union's Home Loan Giveback program to support our mission.",
+    image: porchHammer,
   },
 ];
 
@@ -43,6 +64,81 @@ const pillars = [
   { img: pillarStability, title: "Stability", desc: "Building a foundation for family growth" },
   { img: pillarSelfReliance, title: "Self-Reliance", desc: "Keys to independence and opportunity" },
 ];
+
+function NewsCarousel() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const checkScroll = () => {
+    if (!scrollRef.current) return;
+    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+    setCanScrollLeft(scrollLeft > 10);
+    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+  };
+
+  const scroll = (dir: number) => {
+    if (!scrollRef.current) return;
+    scrollRef.current.scrollBy({ left: dir * 380, behavior: "smooth" });
+  };
+
+  return (
+    <div className="relative">
+      {/* Scroll buttons */}
+      {canScrollLeft && (
+        <button
+          onClick={() => scroll(-1)}
+          className="absolute -left-4 top-1/2 z-10 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-card shadow-brand-lg transition-all hover:scale-110"
+          aria-label="Scroll left"
+        >
+          <ChevronLeft className="h-5 w-5 text-foreground" />
+        </button>
+      )}
+      {canScrollRight && (
+        <button
+          onClick={() => scroll(1)}
+          className="absolute -right-4 top-1/2 z-10 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-card shadow-brand-lg transition-all hover:scale-110"
+          aria-label="Scroll right"
+        >
+          <ChevronRight className="h-5 w-5 text-foreground" />
+        </button>
+      )}
+
+      <div
+        ref={scrollRef}
+        onScroll={checkScroll}
+        className="flex gap-6 overflow-x-auto scroll-smooth pb-4 scrollbar-hide"
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+      >
+        {newsItems.map((item, i) => (
+          <AnimatedSection key={item.title} delay={i * 0.08}>
+            <div className="group w-[340px] flex-shrink-0 overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-brand">
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  width={680}
+                  height={384}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent" />
+                <div className="absolute bottom-3 left-3 flex items-center gap-1.5 rounded-full bg-card/90 px-3 py-1 text-xs font-medium text-foreground backdrop-blur-sm">
+                  <Calendar className="h-3 w-3" />
+                  {item.date}
+                </div>
+              </div>
+              <div className="p-5">
+                <h3 className="font-heading text-lg font-bold text-foreground line-clamp-2">{item.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground line-clamp-3">{item.excerpt}</p>
+              </div>
+            </div>
+          </AnimatedSection>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function Index() {
   return (
@@ -66,7 +162,7 @@ function Index() {
         </div>
       </section>
 
-      {/* Mission + Events/News */}
+      {/* Mission */}
       <section className="px-4 py-24">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-16 lg:grid-cols-5">
@@ -98,24 +194,13 @@ function Index() {
                     Our Programs
                   </a>
                 </div>
-                {/* Animated down arrow */}
-                <div className="mt-10 flex justify-center">
-                  <motion.div
-                    animate={{ y: [0, 10, 0] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                    className="text-primary/60"
-                  >
-                    <ChevronDown className="h-8 w-8" />
-                  </motion.div>
-                </div>
               </AnimatedSection>
             </div>
 
-            {/* Events & News sidebar - right 2 cols */}
+            {/* Events sidebar - right 2 cols */}
             <div className="lg:col-span-2">
               <AnimatedSection delay={0.2}>
                 <div className="rounded-2xl border border-border bg-card p-6 space-y-6">
-                  {/* Events section */}
                   <div>
                     <div className="flex items-center gap-2 mb-4">
                       <span className="inline-flex items-center rounded-full bg-primary/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">
@@ -142,28 +227,28 @@ function Index() {
                       See All Events on Facebook →
                     </a>
                   </div>
-
-                  {/* News section */}
-                  <div>
-                    <div className="flex items-center gap-2 mb-4">
-                      <span className="inline-flex items-center rounded-full bg-accent/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent-foreground">
-                        📰 News
-                      </span>
-                    </div>
-                    <div className="space-y-4">
-                      {newsItems.map((item) => (
-                        <div key={item.title} className="border-b border-border pb-4 last:border-0 last:pb-0">
-                          <div className="text-xs text-muted-foreground">{item.date}</div>
-                          <h4 className="mt-1 font-heading font-semibold text-foreground">{item.title}</h4>
-                          <p className="mt-1 text-sm text-muted-foreground">{item.excerpt}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
                 </div>
               </AnimatedSection>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* News & Updates — full-width carousel */}
+      <section className="bg-muted/50 px-4 py-24">
+        <div className="mx-auto max-w-7xl">
+          <AnimatedSection>
+            <div className="mb-10 flex items-end justify-between">
+              <div>
+                <span className="inline-block rounded-full bg-accent/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent-foreground">
+                  Latest Updates
+                </span>
+                <h2 className="mt-4 font-heading text-3xl font-bold text-foreground sm:text-4xl">News & Progress</h2>
+                <p className="mt-2 max-w-lg text-muted-foreground">Follow along as we build homes and transform lives in Barry County.</p>
+              </div>
+            </div>
+          </AnimatedSection>
+          <NewsCarousel />
         </div>
       </section>
 
