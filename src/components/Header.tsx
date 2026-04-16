@@ -2,6 +2,7 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import habitatLogo from "../assets/habitat-logo.jpg";
 
 const navLinks = [
   { to: "/" as const, label: "Home" },
@@ -24,16 +25,8 @@ export default function Header() {
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
-          <Link to="/" className="flex items-center gap-3 transition-transform hover:scale-[1.02]">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-              <svg viewBox="0 0 24 24" className="h-6 w-6 text-primary-foreground" fill="currentColor">
-                <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z" />
-              </svg>
-            </div>
-            <div className="leading-tight">
-              <div className="font-heading text-lg font-bold text-foreground">Habitat for Humanity</div>
-              <div className="text-xs text-muted-foreground">Barry County</div>
-            </div>
+          <Link to="/" className="flex items-center transition-transform hover:scale-[1.02]">
+            <img src={habitatLogo} alt="Habitat for Humanity Barry County" className="h-12 w-auto" />
           </Link>
 
           {/* Desktop nav */}
