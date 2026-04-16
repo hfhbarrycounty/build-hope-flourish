@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import AnimatedSection from "../components/AnimatedSection";
-import volunteerFraming from "../assets/volunteer-framing.jpg";
+import whatWeDoHero from "../assets/what-we-do-hero.jpg";
 import gasLineWork from "../assets/gas-line-work.jpg";
 
 export const Route = createFileRoute("/what-we-do")({
