@@ -70,14 +70,35 @@ function RestorePage() {
                     <MapPin className="h-5 w-5" />
                     <h3 className="font-heading font-semibold">Location</h3>
                   </div>
-                  <p className="mt-2 text-sm text-muted-foreground">1215 N Broadway, Hastings, MI 49058</p>
-                  <div className="mt-2 flex items-center gap-2 text-sm text-muted-foreground">
-                    <Phone className="h-4 w-4" />
-                    <a href="tel:2699489998" className="hover:text-foreground">(269) 948-9998</a>
-                  </div>
-                  <div className="mt-2 flex items-center gap-2 text-sm text-muted-foreground">
-                    <Mail className="h-4 w-4" />
-                    <a href="mailto:restore@HastingsReStore.org" className="hover:text-foreground">restore@HastingsReStore.org</a>
+                  <div className="mt-3 grid gap-4 sm:grid-cols-2">
+                    <div className="overflow-hidden rounded-lg border border-border">
+                      <iframe
+                        title="Habitat ReStore on Google Maps"
+                        src="https://www.google.com/maps?q=1215+N+Broadway+Hastings+MI+49058&output=embed"
+                        className="h-40 w-full"
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                      />
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      <p>1215 N Broadway,<br />Hastings, MI 49058</p>
+                      <div className="mt-2 flex items-center gap-2">
+                        <Phone className="h-4 w-4" />
+                        <a href="tel:2699489998" className="hover:text-foreground">(269) 948-9998</a>
+                      </div>
+                      <div className="mt-2 flex items-center gap-2">
+                        <Mail className="h-4 w-4" />
+                        <a href="mailto:restore@HastingsReStore.org" className="break-all hover:text-foreground">restore@HastingsReStore.org</a>
+                      </div>
+                      <a
+                        href="https://www.google.com/maps/dir/?api=1&destination=1215+N+Broadway+Hastings+MI+49058"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 inline-block text-xs font-semibold text-primary hover:underline"
+                      >
+                        Get Directions →
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
