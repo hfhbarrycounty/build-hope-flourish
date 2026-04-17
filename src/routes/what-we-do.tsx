@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import AnimatedSection from "../components/AnimatedSection";
 import whatWeDoImage from "../assets/whatwedo.jpg";
-import whatWeDoDetail from "../assets/whatwedo-detail.jpg";
+import whatWeDoVideo from "../assets/whatwedo.mp4";
 
 export const Route = createFileRoute("/what-we-do")({
   head: () => ({
@@ -57,7 +57,15 @@ function WhatWeDoPage() {
                 </div>
               </div>
               <div className="overflow-hidden rounded-2xl shadow-brand-lg">
-                <img src={whatWeDoDetail} alt="Workers installing gas line at build site" className="h-full w-full object-cover" loading="lazy" width={800} height={600} />
+                <video
+                  src={whatWeDoVideo}
+                  className="h-full w-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  controls
+                />
               </div>
             </div>
           </AnimatedSection>
