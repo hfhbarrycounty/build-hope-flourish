@@ -74,15 +74,15 @@ function NewsCarousel() {
       >
         {newsItems.map((item, i) => (
           <AnimatedSection key={item.title} delay={i * 0.08}>
-            <Link to="/news/$slug" params={{ slug: item.slug }} className="group block w-[340px] flex-shrink-0 overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-brand">
-              <div className="relative h-48 overflow-hidden">
+            <Link to="/news/$slug" params={{ slug: item.slug }} className="group block w-[400px] flex-shrink-0 overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-brand">
+              <div className="relative h-56 overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.title}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
-                  width={680}
-                  height={384}
+                  width={800}
+                  height={450}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent" />
                 <div className="absolute bottom-3 left-3 flex items-center gap-1.5 rounded-full bg-card/90 px-3 py-1 text-xs font-medium text-foreground backdrop-blur-sm">
@@ -90,10 +90,10 @@ function NewsCarousel() {
                   {item.date}
                 </div>
               </div>
-              <div className="p-5">
-                <h3 className="font-heading text-lg font-bold text-foreground line-clamp-2 group-hover:text-primary transition-colors">{item.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground line-clamp-3">{item.excerpt}</p>
-                <span className="mt-3 inline-block text-xs font-semibold text-primary">Read more →</span>
+              <div className="p-6">
+                <h3 className="font-heading text-xl font-bold text-foreground line-clamp-2 group-hover:text-primary transition-colors">{item.title}</h3>
+                <p className="mt-3 text-base text-muted-foreground line-clamp-4">{item.excerpt}</p>
+                <span className="mt-4 inline-block text-sm font-semibold text-primary">Read more →</span>
               </div>
             </Link>
           </AnimatedSection>
