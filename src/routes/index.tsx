@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import HeroSlideshow from "../components/HeroSlideshow";
 import AnimatedSection from "../components/AnimatedSection";
-import { Home, Users, HardHat, Heart, ChevronDown, ChevronLeft, ChevronRight, Calendar } from "lucide-react";
+import { Home, Users, HardHat, ChevronDown, ChevronLeft, ChevronRight, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import pillar1 from "../assets/pillar1.png";
