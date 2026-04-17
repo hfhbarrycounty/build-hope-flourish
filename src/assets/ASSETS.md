@@ -4,10 +4,10 @@ All images live in `src/assets/`. To swap an image, just replace the file with t
 
 ## Home Page
 - `slideshow1.jpg` – `slideshow6.jpg` — Hero slideshow at top of home page (used in `src/components/HeroSlideshow.tsx`)
-- `pillar1.png` — "Shelter" icon (Building Strength section)
-- `pillar2.png` — "Strength" icon
-- `pillar3.png` — "Stability" icon
-- `pillar4.png` — "Self-Reliance" icon
+- `shelter.png` — "Shelter" icon (Building Strength section)
+- `strength.png` — "Strength" icon
+- `stability.png` — "Stability" icon
+- `self-reliance.png` — "Self-Reliance" icon
 - `news1.jpg` – `news5.jpg` — News carousel images (edit text in `src/lib/news.ts`)
 
 ## Page Hero Images

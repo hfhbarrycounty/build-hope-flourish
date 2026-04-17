@@ -4,10 +4,10 @@ import AnimatedSection from "../components/AnimatedSection";
 import { Home, Users, HardHat, ChevronDown, ChevronLeft, ChevronRight, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-import pillar1 from "../assets/pillar1.png";
-import pillar2 from "../assets/pillar2.png";
-import pillar3 from "../assets/pillar3.png";
-import pillar4 from "../assets/pillar4.png";
+import shelter from "../assets/shelter.png";
+import strength from "../assets/strength.png";
+import stability from "../assets/stability.png";
+import selfReliance from "../assets/self-reliance.png";
 import { newsItems } from "../lib/news";
 
 export const Route = createFileRoute("/")({
@@ -21,10 +21,10 @@ const stats = [
 ];
 
 const pillars = [
-  { img: pillar1, title: "Shelter", desc: "Safe, affordable housing for families in need" },
-  { img: pillar2, title: "Strength", desc: "Empowering families through homeownership" },
-  { img: pillar3, title: "Stability", desc: "Building a foundation for family growth" },
-  { img: pillar4, title: "Self-Reliance", desc: "Keys to independence and opportunity" },
+  { img: shelter, title: "Shelter", desc: "Safe, affordable housing for families in need" },
+  { img: strength, title: "Strength", desc: "Empowering families through homeownership" },
+  { img: stability, title: "Stability", desc: "Building a foundation for family growth" },
+  { img: selfReliance, title: "Self-Reliance", desc: "Keys to independence and opportunity" },
 ];
 
 function NewsCarousel() {
