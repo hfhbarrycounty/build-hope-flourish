@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import AnimatedSection from "../components/AnimatedSection";
 import { HardHat, Paintbrush, Store, Heart } from "lucide-react";
-import volunteerFraming from "../assets/volunteer-framing.jpg";
+import volunteerImage from "../assets/volunteer.jpg";
 
 export const Route = createFileRoute("/volunteer")({
   head: () => ({
@@ -26,7 +26,7 @@ function VolunteerPage() {
   return (
     <>
       <section className="relative h-[40vh] min-h-[300px] overflow-hidden">
-        <img src={volunteerFraming} alt="Volunteers framing a house at the build site" className="h-full w-full object-cover" style={{ objectPosition: "center 55%" }} width={1920} height={1080} />
+        <img src={volunteerImage} alt="Volunteers framing a house at the build site" className="h-full w-full object-cover" style={{ objectPosition: "center 55%" }} width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 to-foreground/20" />
         <div className="absolute inset-0 flex items-end">
           <div className="mx-auto w-full max-w-7xl px-4 pb-12">

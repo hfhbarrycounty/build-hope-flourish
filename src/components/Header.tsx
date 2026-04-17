@@ -2,7 +2,7 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import habitatLogo from "../assets/habitat-logo.jpg";
+import headerLogo from "../assets/header-logo.jpg";
 
 const navLinks = [
   { to: "/" as const, label: "Home" },
@@ -26,7 +26,7 @@ export default function Header() {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
           <Link to="/" className="flex items-center transition-transform hover:scale-[1.02]">
-            <img src={habitatLogo} alt="Habitat for Humanity Barry County" className="h-12 w-auto" />
+            <img src={headerLogo} alt="Habitat for Humanity Barry County" className="h-12 w-auto" />
           </Link>
 
           {/* Desktop nav */}
