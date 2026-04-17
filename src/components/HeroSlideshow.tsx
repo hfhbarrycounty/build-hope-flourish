@@ -85,7 +85,7 @@ export default function HeroSlideshow() {
                 Donate Now
               </a>
               <a
-                href="https://hfhbarrycounty.charityproud.org/VolunteerRegistration/Index/?activity=53253&date=8/6/2025"
+                href="https://hfhbarrycounty.charityproud.org/VolunteerRegistration/Calendar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-lg border-2 border-primary-foreground/30 px-8 py-3.5 font-semibold text-primary-foreground backdrop-blur-sm transition-all hover:border-primary-foreground/60 hover:bg-primary-foreground/10"

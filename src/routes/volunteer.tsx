@@ -68,7 +68,7 @@ function VolunteerPage() {
                 Sign up to volunteer on our next build. We welcome individuals, groups, and corporate teams.
               </p>
               <a
-                href="https://hfhbarrycounty.charityproud.org/VolunteerRegistration/Index/?activity=53253&date=8/6/2025"
+                href="https://hfhbarrycounty.charityproud.org/VolunteerRegistration/Calendar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 inline-block rounded-lg bg-card px-8 py-3.5 font-semibold text-foreground shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-xl"

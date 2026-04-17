@@ -267,7 +267,7 @@ function Index() {
                   Donate Now
                 </a>
                 <a
-                  href="https://hfhbarrycounty.charityproud.org/VolunteerRegistration/Index/?activity=53253&date=8/6/2025"
+                  href="https://hfhbarrycounty.charityproud.org/VolunteerRegistration/Calendar"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-lg border-2 border-primary-foreground/40 px-8 py-3.5 font-semibold text-primary-foreground transition-all hover:border-primary-foreground/80 hover:bg-primary-foreground/10"
