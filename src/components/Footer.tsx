@@ -109,7 +109,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-primary-foreground/10 pt-8 text-xs opacity-50 sm:flex-row">
+        <div className="mt-12 border-t border-primary-foreground/10 pt-8">
+          <div className="mb-6 rounded-lg bg-primary-foreground/5 p-5 text-xs leading-relaxed opacity-70">
+            <p className="mb-1 font-heading font-semibold uppercase tracking-wider opacity-80">Non-proselytizing policy</p>
+            <p>
+              Habitat for Humanity and its affiliate organizations will not proselytize. Nor will Habitat work with entities or individuals who insist on proselytizing as part of their work with Habitat. This means that Habitat will not offer assistance on the expressed or implied condition that people must adhere to or convert to a particular faith or listen and respond to messaging designed to induce conversion to a particular faith.
+            </p>
+          </div>
+        <div className="flex flex-col items-center justify-between gap-4 text-xs opacity-50 sm:flex-row">
           <p>© 2026 Barry County Habitat For Humanity &nbsp;|&nbsp; ALL RIGHTS RESERVED &nbsp;|&nbsp; CREATED BY iFixTech</p>
           <div className="flex items-center gap-4">
             <a href="https://www.facebook.com/Habitat.Barry" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
