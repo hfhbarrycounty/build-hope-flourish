@@ -15,10 +15,9 @@ export const Route = createFileRoute("/")({
 });
 
 const stats = [
-  { icon: Home, value: "44+", label: "Homes Built" },
+  { icon: Home, value: "45+", label: "Homes Built" },
   { icon: Users, value: "35+", label: "Years Serving" },
   { icon: HardHat, value: "1000+", label: "Volunteers" },
-  { icon: Heart, value: "100%", label: "Volunteer-Driven" },
 ];
 
 const pillars = [
@@ -112,7 +111,7 @@ function Index() {
       {/* Stats band */}
       <section className="relative -mt-16 z-10 px-4">
         <div className="mx-auto max-w-5xl">
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {stats.map((stat, i) => (
               <AnimatedSection key={stat.label} delay={i * 0.1}>
                 <div className="rounded-xl bg-card p-6 text-center shadow-brand transition-all hover:-translate-y-1 hover:shadow-brand-lg">
@@ -141,7 +140,7 @@ function Index() {
                 </h2>
                 <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    Habitat for Humanity Barry County was incorporated on May 8, 1989 and since that time we have built 44 new homes in partnership with low-income Barry County families.
+                    Habitat for Humanity Barry County was incorporated on May 8, 1989 and since that time we have built 45 new homes in partnership with low-income Barry County families.
                   </p>
                   <p className="text-lg font-medium italic text-foreground/80">
                     "Seeking to put God's love into action, Habitat for Humanity brings people together to build homes, communities and hope."
@@ -172,14 +171,14 @@ function Index() {
                       </span>
                     </div>
                     <a
-                      href="https://www.facebook.com/events/949489477586902"
+                      href="https://www.facebook.com/Habitat.Barry/events"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block rounded-xl bg-gradient-brand-subtle p-4 transition-all hover:shadow-brand hover:-translate-y-0.5"
                     >
                       <span className="inline-block rounded-full bg-primary/20 px-2.5 py-0.5 text-xs font-semibold text-primary">Upcoming</span>
-                      <h4 className="mt-2 font-heading font-semibold text-foreground">House #45 Dedication</h4>
-                      <p className="mt-1 text-sm text-muted-foreground">February 25, 2026 at 7 PM — 1201 N Broadway, Hastings</p>
+                      <h4 className="mt-2 font-heading font-semibold text-foreground">Building Better Dinner and Silent Auction</h4>
+                      <p className="mt-1 text-sm text-muted-foreground">May 7, 2026 · 5:30 PM – 8:30 PM</p>
                       <span className="mt-2 inline-block text-xs font-semibold text-primary">View on Facebook →</span>
                     </a>
                     <a
