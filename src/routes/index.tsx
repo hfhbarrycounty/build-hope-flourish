@@ -41,7 +41,7 @@ function NewsCarousel() {
 
   const scroll = (dir: number) => {
     if (!scrollRef.current) return;
-    scrollRef.current.scrollBy({ left: dir * 380, behavior: "smooth" });
+    scrollRef.current.scrollBy({ left: dir * 430, behavior: "smooth" });
   };
 
   return (
