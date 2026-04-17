@@ -98,10 +98,10 @@ export default function HeroSlideshow() {
       </div>
 
       {/* Navigation arrows */}
-      <button onClick={prev} className="absolute left-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-foreground/20 text-primary-foreground backdrop-blur-sm transition-all hover:bg-foreground/40" aria-label="Previous slide">
+      <button onClick={prev} className="absolute left-4 top-1/2 -translate-y-1/2 hidden h-12 w-12 items-center justify-center rounded-full bg-foreground/20 text-primary-foreground backdrop-blur-sm transition-all hover:bg-foreground/40 md:flex" aria-label="Previous slide">
         <ChevronLeft className="h-6 w-6" />
       </button>
-      <button onClick={next} className="absolute right-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-foreground/20 text-primary-foreground backdrop-blur-sm transition-all hover:bg-foreground/40" aria-label="Next slide">
+      <button onClick={next} className="absolute right-4 top-1/2 -translate-y-1/2 hidden h-12 w-12 items-center justify-center rounded-full bg-foreground/20 text-primary-foreground backdrop-blur-sm transition-all hover:bg-foreground/40 md:flex" aria-label="Next slide">
         <ChevronRight className="h-6 w-6" />
       </button>
 
