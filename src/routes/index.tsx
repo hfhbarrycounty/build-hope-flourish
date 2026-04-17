@@ -16,7 +16,7 @@ export const Route = createFileRoute("/")({
 
 const stats = [
   { icon: Home, value: "45+", label: "Homes Built" },
-  { icon: Users, value: "35+", label: "Years Serving" },
+  { icon: Users, value: "37+", label: "Years Serving" },
   { icon: HardHat, value: "1000+", label: "Volunteers" },
 ];
 
