@@ -1,3 +1,33 @@
+// ============================================================================
+// NEWS ARTICLES
+// ============================================================================
+//
+// HOW TO ADD A NEW ARTICLE:
+// -------------------------
+// 1. Add your image to src/assets/ (e.g. news6.jpg)
+// 2. Import it at the top of this file:
+//        import news6 from "../assets/news6.jpg";
+// 3. Copy the TEMPLATE block below and paste it at the TOP of the newsItems
+//    array (newest articles go first — they show up first on the site).
+// 4. Fill in the fields. That's it!
+//
+// TEMPLATE — copy everything between the /* and */ markers:
+/*
+  {
+    slug: "your-article-url-slug",          // URL-friendly, lowercase, hyphens only
+    title: "Your Article Title Here",       // Shown as the headline
+    date: "Month DD, YYYY",                 // e.g. "March 15, 2026"
+    excerpt: "A short 1-2 sentence summary that appears on the home page card.",
+    image: news6,                           // The image you imported above
+    body: `First paragraph of your article goes here. Write naturally.
+
+Second paragraph — separate paragraphs with a blank line (two line breaks).
+
+Third paragraph, and so on. You can have as many paragraphs as you like.`,
+  },
+*/
+// ============================================================================
+
 import news1 from "../assets/news1.jpg";
 import news2 from "../assets/news2.jpg";
 import news3 from "../assets/news3.jpg";
@@ -14,6 +44,8 @@ export interface NewsItem {
 }
 
 export const newsItems: NewsItem[] = [
+  // ⬇️ Newest article goes here (at the top of the list)
+
   {
     slug: "painting-and-trim-underway",
     title: "Painting and Trim Underway!",
@@ -80,6 +112,8 @@ The Home Loan Giveback program donates a portion of home loan proceeds to Habita
 
 Thank you, Lake Trust Credit Union, for your incredible generosity and partnership! Gifts like this make it possible for us to continue building homes, communities, and hope in Barry County.`,
   },
+
+  // ⬆️ Oldest article is at the bottom
 ];
 
 export function getNewsItem(slug: string): NewsItem | undefined {
