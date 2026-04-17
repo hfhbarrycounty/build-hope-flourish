@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import headerLogo from "../assets/header-logo.jpg";
 
 function FacebookIcon({ className }: { className?: string }) {
   return (
@@ -25,10 +26,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-                <svg viewBox="0 0 24 24" className="h-6 w-6 text-primary-foreground" fill="currentColor">
-                  <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z" />
-                </svg>
+              <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-lg bg-primary-foreground">
+                <img src={headerLogo} alt="Habitat for Humanity Barry County" className="h-full w-full object-contain" />
               </div>
               <div className="leading-tight">
                 <div className="font-heading text-lg font-bold">Habitat for Humanity</div>
@@ -91,6 +90,10 @@ export default function Footer() {
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 shrink-0 opacity-50" />
                 <a href="mailto:office@hfhbarrycounty.org" className="opacity-70 hover:opacity-100">office@hfhbarrycounty.org</a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail className="h-4 w-4 shrink-0 opacity-50" />
+                <a href="mailto:restore@HastingsReStore.org" className="break-all opacity-70 hover:opacity-100">restore@HastingsReStore.org</a>
               </li>
             </ul>
           </div>
