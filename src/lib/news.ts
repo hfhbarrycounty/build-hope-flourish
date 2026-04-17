@@ -1,8 +1,8 @@
-import paintingInterior from "../assets/painting-interior.jpg";
-import interiorTrim from "../assets/interior-trim.jpg";
-import heroGroupBuild from "../assets/hero-group-build.jpg";
-import houseExterior from "../assets/house-exterior.jpg";
-import lakeTrustTeam from "../assets/lake-trust-team.jpg";
+import news1 from "../assets/news1.jpg";
+import news2 from "../assets/news2.jpg";
+import news3 from "../assets/news3.jpg";
+import news4 from "../assets/news4.jpg";
+import news5 from "../assets/news5.jpg";
 
 export interface NewsItem {
   slug: string;

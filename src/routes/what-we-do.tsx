@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import AnimatedSection from "../components/AnimatedSection";
-import whatWeDoHero from "../assets/what-we-do-hero.jpg";
-import gasLineWork from "../assets/gas-line-work.jpg";
+import whatWeDoImage from "../assets/whatwedo.jpg";
+import whatWeDoDetail from "../assets/whatwedo-detail.jpg";
 
 export const Route = createFileRoute("/what-we-do")({
   head: () => ({
@@ -19,7 +19,7 @@ function WhatWeDoPage() {
   return (
     <>
       <section className="relative h-[40vh] min-h-[300px] overflow-hidden">
-        <img src={whatWeDoHero} alt="Volunteers building roof trusses at the construction site" className="h-full w-full object-cover" style={{ objectPosition: "center 28%" }} width={1920} height={1080} />
+        <img src={whatWeDoImage} alt="Volunteers building roof trusses at the construction site" className="h-full w-full object-cover" style={{ objectPosition: "center 28%" }} width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 to-foreground/20" />
         <div className="absolute inset-0 flex items-end">
           <div className="mx-auto w-full max-w-7xl px-4 pb-12">
@@ -57,7 +57,7 @@ function WhatWeDoPage() {
                 </div>
               </div>
               <div className="overflow-hidden rounded-2xl shadow-brand-lg">
-                <img src={gasLineWork} alt="Workers installing gas line at build site" className="h-full w-full object-cover" loading="lazy" width={800} height={600} />
+                <img src={whatWeDoDetail} alt="Workers installing gas line at build site" className="h-full w-full object-cover" loading="lazy" width={800} height={600} />
               </div>
             </div>
           </AnimatedSection>

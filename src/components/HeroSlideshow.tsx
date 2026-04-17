@@ -2,20 +2,20 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-import heroGroupBuild from "../assets/hero-group-build.jpg";
-import porchHammer from "../assets/porch-hammer.jpg";
-import groupPorch from "../assets/group-porch.jpg";
-import houseExterior from "../assets/house-exterior.jpg";
-import restoreGroup from "../assets/restore-group.jpg";
-import rooflineCrew from "../assets/roofline-crew.jpg";
+import slideshow1 from "../assets/slideshow1.jpg";
+import slideshow2 from "../assets/slideshow2.jpg";
+import slideshow3 from "../assets/slideshow3.jpg";
+import slideshow4 from "../assets/slideshow4.jpg";
+import slideshow5 from "../assets/slideshow5.jpg";
+import slideshow6 from "../assets/slideshow6.jpg";
 
 const slides = [
-  { src: heroGroupBuild, alt: "Volunteer group at build site" },
-  { src: houseExterior, alt: "Home #45 under construction" },
-  { src: restoreGroup, alt: "Bradford White team at the ReStore" },
-  { src: porchHammer, alt: "Volunteer on the front porch" },
-  { src: groupPorch, alt: "Build team on the porch" },
-  { src: rooflineCrew, alt: "Crew working on the roofline" },
+  { src: slideshow1, alt: "Volunteer group at build site" },
+  { src: slideshow2, alt: "Home #45 under construction" },
+  { src: slideshow3, alt: "Bradford White team at the ReStore" },
+  { src: slideshow4, alt: "Volunteer on the front porch" },
+  { src: slideshow5, alt: "Build team on the porch" },
+  { src: slideshow6, alt: "Crew working on the roofline" },
 ];
 
 export default function HeroSlideshow() {
