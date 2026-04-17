@@ -28,6 +28,11 @@ export const Route = createRootRoute({
       { property: "og:title", content: "Habitat for Humanity Barry County" },
       { property: "og:description", content: "Building homes, communities and hope in Barry County, Michigan since 1989." },
       { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "Habitat for Humanity Barry County" },
+      { name: "twitter:description", content: "Building homes, communities and hope in Barry County, Michigan since 1989." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/284f1d98-cd24-4122-9b8e-a3290a46aa41/id-preview-16c189d8--2761e6c8-72bc-4f85-ac0a-f2d6a53b2865.lovable.app-1776450992990.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/284f1d98-cd24-4122-9b8e-a3290a46aa41/id-preview-16c189d8--2761e6c8-72bc-4f85-ac0a-f2d6a53b2865.lovable.app-1776450992990.png" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
