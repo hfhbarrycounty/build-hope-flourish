@@ -32,10 +32,10 @@ function DonatePage() {
       </section>
 
       <section className="px-4 py-20">
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center">
-              <h2 className="font-heading text-3xl font-bold text-foreground">We Can't Build Without You</h2>
+              <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">We Can't Build Without You</h2>
               <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
                 By donating to Habitat for Humanity Barry County, you invest in our mission to provide a decent place to live for everyone. Your donation helps families build long-term financial security.
               </p>
@@ -67,7 +67,61 @@ function DonatePage() {
             </div>
           </AnimatedSection>
 
+          {/* Where your gift goes */}
           <AnimatedSection delay={0.2}>
+            <div className="mt-20 grid gap-10 lg:grid-cols-2 lg:items-center">
+              <div>
+                <span className="inline-block rounded-full bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary">Your Impact</span>
+                <h2 className="mt-4 font-heading text-3xl font-bold text-foreground">Where Your Gift Goes</h2>
+                <p className="mt-4 text-muted-foreground leading-relaxed">
+                  Every dollar you give stays in Barry County. Donations cover building materials, tools, and site expenses — empowering volunteers to turn a lot into a home for a local family.
+                </p>
+                <p className="mt-3 text-muted-foreground leading-relaxed">
+                  Habitat homes are sold to partner families at appraised value with an affordable mortgage, meaning your gift helps families build equity and long-term stability.
+                </p>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {[
+                  { amt: "$50", t: "A Box of Nails", d: "Keeps the framing crew hammering all weekend." },
+                  { amt: "$150", t: "A Window", d: "Lets natural light into a brand-new home." },
+                  { amt: "$500", t: "A Door", d: "The first thing a family will walk through." },
+                  { amt: "$2,500", t: "A Kitchen", d: "Cabinets, sink, and a place to gather." },
+                ].map((i) => (
+                  <div key={i.amt} className="rounded-xl bg-gradient-brand-subtle p-5">
+                    <div className="font-heading text-2xl font-bold text-primary">{i.amt}</div>
+                    <h4 className="mt-2 font-heading font-semibold text-foreground">{i.t}</h4>
+                    <p className="mt-1 text-sm text-muted-foreground">{i.d}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </AnimatedSection>
+
+          {/* Other ways to give */}
+          <AnimatedSection delay={0.25}>
+            <div className="mt-20 rounded-3xl border border-border bg-card p-8 md:p-12">
+              <div className="text-center">
+                <span className="inline-block rounded-full bg-accent/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent-foreground">More Ways to Give</span>
+                <h2 className="mt-4 font-heading text-2xl font-bold text-foreground sm:text-3xl">Beyond a One-Time Gift</h2>
+              </div>
+              <div className="mt-8 grid gap-6 md:grid-cols-3">
+                <div className="rounded-xl bg-muted p-5">
+                  <h4 className="font-heading font-semibold text-foreground">Monthly Giving</h4>
+                  <p className="mt-2 text-sm text-muted-foreground">Become a sustaining partner with a recurring monthly gift — steady support means steady building.</p>
+                </div>
+                <div className="rounded-xl bg-muted p-5">
+                  <h4 className="font-heading font-semibold text-foreground">Legacy Gifts</h4>
+                  <p className="mt-2 text-sm text-muted-foreground">Include Habitat Barry County in your estate planning and leave a lasting impact on future families.</p>
+                </div>
+                <div className="rounded-xl bg-muted p-5">
+                  <h4 className="font-heading font-semibold text-foreground">Employer Matching</h4>
+                  <p className="mt-2 text-sm text-muted-foreground">Many employers will match your charitable gift — check with your HR department to double your impact.</p>
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection delay={0.3}>
             <div className="mt-16 rounded-2xl bg-muted p-8 text-center">
               <h3 className="font-heading text-lg font-bold text-foreground">Send a Check</h3>
               <p className="mt-2 text-muted-foreground">

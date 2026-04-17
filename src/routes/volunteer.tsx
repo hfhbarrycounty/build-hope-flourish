@@ -39,27 +39,80 @@ function VolunteerPage() {
       </section>
 
       <section className="px-4 py-20">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center">
-              <h2 className="font-heading text-3xl font-bold text-foreground">Ways to Help</h2>
+              <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Ways to Help</h2>
               <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
                 No special skills required. Just bring your willingness to help — we'll provide training, tools, and guidance.
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {opportunities.map((opp, i) => (
               <AnimatedSection key={opp.title} delay={i * 0.1}>
-                <div className="group rounded-2xl border border-border p-8 transition-all hover:-translate-y-1 hover:shadow-brand">
+                <div className="group h-full rounded-2xl border border-border p-6 transition-all hover:-translate-y-1 hover:shadow-brand">
                   <opp.icon className="h-10 w-10 text-primary transition-transform group-hover:scale-110" />
-                  <h3 className="mt-4 font-heading text-xl font-bold text-foreground">{opp.title}</h3>
-                  <p className="mt-2 text-muted-foreground">{opp.desc}</p>
+                  <h3 className="mt-4 font-heading text-lg font-bold text-foreground">{opp.title}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{opp.desc}</p>
                 </div>
               </AnimatedSection>
             ))}
           </div>
+
+          {/* What to expect */}
+          <AnimatedSection delay={0.2}>
+            <div className="mt-20 grid gap-10 lg:grid-cols-2 lg:items-center">
+              <div>
+                <span className="inline-block rounded-full bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary">What to Expect</span>
+                <h2 className="mt-4 font-heading text-3xl font-bold text-foreground">Your First Day on Site</h2>
+                <p className="mt-4 text-muted-foreground leading-relaxed">
+                  You'll be greeted by our construction supervisor and a crew of friendly volunteers. After a safety briefing and quick tour, you'll jump in on whatever task fits the day — framing a wall, installing insulation, painting trim, or helping with site cleanup.
+                </p>
+                <p className="mt-3 text-muted-foreground leading-relaxed">
+                  Bring a water bottle, closed-toe shoes, and weather-appropriate clothing. We'll supply the tools, training, and lunch on most build days.
+                </p>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {[
+                  { n: "1", t: "Sign Up Online", d: "Pick a build date that works for you on the calendar." },
+                  { n: "2", t: "Show Up Ready", d: "Arrive at the site with closed-toe shoes and layers." },
+                  { n: "3", t: "Get Trained", d: "No experience? No problem. We'll teach you on site." },
+                  { n: "4", t: "Build & Belong", d: "Leave with new skills, new friends, and a stronger community." },
+                ].map((s) => (
+                  <div key={s.n} className="rounded-xl bg-gradient-brand-subtle p-5">
+                    <div className="font-heading text-2xl font-bold text-primary">{s.n}</div>
+                    <h4 className="mt-2 font-heading font-semibold text-foreground">{s.t}</h4>
+                    <p className="mt-1 text-sm text-muted-foreground">{s.d}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </AnimatedSection>
+
+          {/* Group volunteering */}
+          <AnimatedSection delay={0.25}>
+            <div className="mt-20 rounded-3xl border border-border bg-card p-8 md:p-12">
+              <div className="grid gap-8 md:grid-cols-3">
+                <div className="md:col-span-2">
+                  <span className="inline-block rounded-full bg-accent/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent-foreground">Groups & Teams</span>
+                  <h2 className="mt-4 font-heading text-2xl font-bold text-foreground sm:text-3xl">Bring Your Company, Church, or Crew</h2>
+                  <p className="mt-4 text-muted-foreground leading-relaxed">
+                    Corporate teams, church groups, youth organizations, and school clubs are welcome. A group build day is one of the most memorable team-building experiences around — and it puts a roof over a neighbor's head in the process.
+                  </p>
+                </div>
+                <div className="rounded-xl bg-muted p-5">
+                  <h4 className="font-heading font-semibold text-foreground">Group Minimums</h4>
+                  <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+                    <li>• Ages 16+ on the build site</li>
+                    <li>• Up to 10 volunteers per day</li>
+                    <li>• Reserve 2+ weeks in advance</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
 
           <AnimatedSection delay={0.3}>
             <div className="mt-16 rounded-3xl bg-gradient-brand p-12 text-center text-primary-foreground shadow-brand-lg">

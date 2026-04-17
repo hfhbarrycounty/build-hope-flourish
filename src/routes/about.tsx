@@ -31,16 +31,16 @@ function AboutPage() {
       </section>
 
       <section className="px-4 py-20">
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto max-w-5xl">
           <AnimatedSection>
-            <div className="space-y-6 text-muted-foreground leading-relaxed">
-              <p className="text-lg text-foreground font-medium">
-                Habitat for Humanity Barry County was incorporated on May 8, 1989. Since that time we have built 44 new homes in partnership with low-income Barry County families.
+            <div className="space-y-7 text-lg text-muted-foreground leading-relaxed">
+              <p className="text-xl text-foreground font-medium leading-relaxed">
+                Habitat for Humanity Barry County was incorporated on May 8, 1989. Since that time we have built 45 new homes in partnership with low-income Barry County families.
               </p>
               <p>
                 Home number 44, just south of Hastings, was built for the Jason Goggins family and completed in late November of 2023. This project was especially significant as the homeowner is a disabled Navy veteran and a single dad raising three kids, including a handicapped son.
               </p>
-              <blockquote className="border-l-4 border-primary pl-6 py-2 text-lg italic text-foreground/80">
+              <blockquote className="border-l-4 border-primary pl-6 py-3 text-xl italic text-foreground/80">
                 "Seeking to put God's love into action, Habitat for Humanity brings people together to build homes, communities and hope."
               </blockquote>
               <p>
