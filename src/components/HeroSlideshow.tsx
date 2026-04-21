@@ -73,7 +73,7 @@ export default function HeroSlideshow() {
               & Hope
             </h1>
             <p className="mt-4 text-lg text-primary-foreground/80">
-              Habitat for Humanity Barry County — putting God's love into action since 1989. Together, we've built 44 homes for families in need.
+              Habitat for Humanity Barry County — putting God's love into action since 1989. Together, we've built 45 homes for families in need.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a
