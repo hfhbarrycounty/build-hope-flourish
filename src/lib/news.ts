@@ -36,6 +36,7 @@ import news5 from "../assets/news5.jpg";
 import newsTrimWork from "../assets/news-trim-work.jpg";
 import newsDedication from "../assets/news-dedication.jpg";
 import newsDriveway from "../assets/news-driveway.jpg";
+import newsBuildingBetterDinner from "../assets/news-building-better-dinner.jpg";
 
 export interface NewsItem {
   slug: string;
@@ -48,6 +49,27 @@ export interface NewsItem {
 
 export const newsItems: NewsItem[] = [
   // ⬇️ Newest article goes here (at the top of the list)
+
+  {
+    slug: "building-better-dinner-2026",
+    title: "Habitat for Humanity Barry County Celebrates House #45 and Raises Funds for Future Builds",
+    date: "May 8, 2026",
+    excerpt: "Our annual Building Better Dinner and Silent Auction raised more than $33,000 to support affordable housing efforts throughout Barry County.",
+    image: newsBuildingBetterDinner,
+    body: `Habitat for Humanity Barry County recently welcomed supporters, volunteers, community leaders, and local families to its annual Building Better Dinner and Silent Auction, raising more than thirty-three thousand dollars to support affordable housing efforts throughout Barry County.
+
+The evening featured a silent auction, volunteer testimonials, and a special interview with the Hammond-Cooper family, the homeowners of House #45. The home was dedicated in February, and the family moved in shortly afterward. Final finishing touches on the home have now been completed.
+
+During the evening, the Hammond-Cooper family shared about their experience moving into their new home and the difference it has made for their family. The children spoke about enjoying having space of their own, while the family reflected on the stability and opportunity that homeownership has created for them.
+
+Executive Director Cindy Preston spoke about the growing importance of affordable and energy-efficient housing in today's economy. She highlighted how Habitat homes are designed not only to provide stability for families, but also to help reduce long-term utility costs through energy-efficient construction practices.
+
+Volunteers also shared personal stories about serving with Habitat for Humanity Barry County through construction projects, the ReStore, and other community initiatives. Their remarks emphasized the organization's mission of building strength, stability, and self-reliance through affordable housing.
+
+Funds raised during the Building Better Dinner and Silent Auction will support future Habitat projects, including the construction of House #46. Habitat for Humanity Barry County is currently interviewing prospective partner families for the upcoming home build.
+
+More information about volunteering, donating, or applying for future housing opportunities can be found at hfhbarrycount.org.`,
+  },
 
   {
     slug: "driveway-poured-house-45",
