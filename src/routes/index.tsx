@@ -176,10 +176,10 @@ function Index() {
                       rel="noopener noreferrer"
                       className="block rounded-xl bg-gradient-brand-subtle p-4 transition-all hover:shadow-brand hover:-translate-y-0.5"
                     >
-                      <span className="inline-block rounded-full bg-primary/20 px-2.5 py-0.5 text-xs font-semibold text-primary">Upcoming</span>
-                      <h4 className="mt-2 font-heading font-semibold text-foreground">Building Better Dinner and Silent Auction</h4>
-                      <p className="mt-1 text-sm text-muted-foreground">May 7, 2026 · 5:30 PM – 8:30 PM</p>
-                      <span className="mt-2 inline-block text-xs font-semibold text-primary">View on Facebook →</span>
+                      <span className="inline-block rounded-full bg-primary/20 px-2.5 py-0.5 text-xs font-semibold text-primary">Coming Soon</span>
+                      <h4 className="mt-2 font-heading font-semibold text-foreground">Groundbreaking — Home #46</h4>
+                      <p className="mt-1 text-sm text-muted-foreground">Sometime in June · Stay tuned for the date!</p>
+                      <span className="mt-2 inline-block text-xs font-semibold text-primary">Follow us on Facebook →</span>
                     </a>
                     <a
                       href="https://www.facebook.com/Habitat.Barry/events"
