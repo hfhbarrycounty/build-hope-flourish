@@ -108,7 +108,7 @@ export default function Footer() {
               <li className="flex items-center gap-2 opacity-70"><Clock className="h-4 w-4 shrink-0 opacity-50" />Sat: 10am – 3pm</li>
             </ul>
             <p className="mt-3 text-xs opacity-50">Closed Sun & Mon · Pickups on Tuesdays</p>
-            <p className="mt-2 text-xs opacity-50">Appointments: 2:30pm Friday</p>
+            <p className="mt-2 text-xs opacity-50">Please contact us for a pick-up appointment, and PLEASE do not leave items after hours.</p>
           </div>
         </div>
 
