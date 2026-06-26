@@ -178,7 +178,7 @@ function Index() {
                     >
                       <span className="inline-block rounded-full bg-primary/20 px-2.5 py-0.5 text-xs font-semibold text-primary">Coming Soon</span>
                       <h4 className="mt-2 font-heading font-semibold text-foreground">Groundbreaking — Home #46</h4>
-                      z<p className="mt-1 text-sm text-muted-foreground">likely in August, Due to needed property rezoning· Stay tuned for the date!</p>
+                      <p className="mt-1 text-sm text-muted-foreground">This will likely be in August, Due to needed property rezoning· Stay tuned for the date!</p>
                       <span className="mt-2 inline-block text-xs font-semibold text-primary">Follow us on Facebook →</span>
                     </a>
                     <a
