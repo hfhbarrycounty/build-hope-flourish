@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import headerLogo from "../assets/header-logo.jpg";
+import equalHousingLogo from "../assets/equal-housing-opportunity.png";
 
 function FacebookIcon({ className }: { className?: string }) {
   return (
@@ -113,6 +114,19 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-primary-foreground/10 pt-8">
+          <div className="mb-6 flex flex-col items-start gap-4 rounded-lg bg-primary-foreground/5 p-5 sm:flex-row sm:items-center">
+            <img
+              src={equalHousingLogo}
+              alt="Equal Housing Opportunity"
+              className="h-20 w-20 shrink-0 rounded bg-white p-1"
+            />
+            <div className="text-xs leading-relaxed opacity-80">
+              <p className="mb-1 font-heading font-semibold uppercase tracking-wider">Equal Housing Opportunity</p>
+              <p>
+                Habitat for Humanity Barry County is pledged to the letter and spirit of U.S. policy for the achievement of equal housing opportunity throughout the nation. We encourage and support an affirmative advertising and marketing program in which there are no barriers to obtaining housing because of race, color, religion, sex, handicap, familial status, or national origin.
+              </p>
+            </div>
+          </div>
           <div className="mb-6 rounded-lg bg-primary-foreground/5 p-5 text-xs leading-relaxed opacity-70">
             <p className="mb-1 font-heading font-semibold uppercase tracking-wider opacity-80">Non-proselytizing policy</p>
             <p>
