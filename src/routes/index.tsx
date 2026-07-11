@@ -177,8 +177,8 @@ function Index() {
                       className="block rounded-xl bg-gradient-brand-subtle p-4 transition-all hover:shadow-brand hover:-translate-y-0.5"
                     >
                       <span className="inline-block rounded-full bg-primary/20 px-2.5 py-0.5 text-xs font-semibold text-primary">Coming Soon</span>
-                      <h4 className="mt-2 font-heading font-semibold text-foreground">Groundbreaking — Home #46</h4>
-                      <p className="mt-1 text-sm text-muted-foreground">This will likely be in August, due to needed property rezoning· Stay tuned for the date!</p>
+                      <h4 className="mt-2 font-heading font-semibold text-foreground">Home #46 — Groundbreaking</h4>
+                      <p className="mt-1 text-sm text-muted-foreground">Zoning appeal expected no earlier than August. Groundbreaking will follow once approvals are secured.</p>
                       <span className="mt-2 inline-block text-xs font-semibold text-primary">Follow us on Facebook →</span>
                     </a>
                     <a
