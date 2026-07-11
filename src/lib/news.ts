@@ -37,6 +37,7 @@ import newsTrimWork from "../assets/news-trim-work.jpg";
 import newsDedication from "../assets/news-dedication.jpg";
 import newsDriveway from "../assets/news-driveway.jpg";
 import newsBuildingBetterDinner from "../assets/news-building-better-dinner.jpg";
+import bondurant from "../assets/bondurant.png";
 
 export interface NewsItem {
   slug: string;
@@ -49,6 +50,35 @@ export interface NewsItem {
 
 export const newsItems: NewsItem[] = [
   // ⬇️ Newest article goes here (at the top of the list)
+
+  {
+    slug: "family-selected-home-46",
+    title: "Habitat for Humanity Barry County Selects Family for 46th Home",
+    date: "July 3, 2026",
+    excerpt: "Amiee Bondurant and her teenage children, Riley and Mason, will be the partner family for Home #46, planned for a lot at the corner of High Street and Michigan Avenue in Hastings.",
+    image: bondurant,
+    body: `HASTINGS, Mich. — Habitat for Humanity Barry County has selected Amiee Bondurant and her two teenage children, Riley and Mason, as the partner family for the organization's 46th home — a milestone build planned for a lot at the corner of High Street and Michigan Avenue in Hastings, pending final zoning approval.
+
+Bondurant, a childcare provider, grew up in Hastings before marrying and relocating to Oregon. She later returned to Michigan with her three children to escape a domestic abuse situation, rebuilding her life and re-establishing roots in the Hastings community. Her oldest child has since moved out on his own, and Bondurant now shares a two-bedroom apartment with Riley and Mason — a space so tight that Bondurant has slept in the living room for the past several years.
+
+"We are so excited to be chosen," the family said of the news, a sentiment that reflects years of resilience and the promise of finally having a home of their own.
+
+A Home With a Story Already Attached
+
+The proposed building site is not new to the idea of family life. A single-family home once stood on the same lot before it was destroyed by fire last year. Habitat for Humanity Barry County currently owns the property and hopes to give it new purpose as the foundation for the Bondurant family's future.
+
+Before construction can begin, however, the project must clear a key regulatory hurdle. The lot requires a rezoning approval and setback variances, both of which will go before a zoning appeals meeting no earlier than August, with the possibility of the process extending into September.
+
+"We won't break ground until we know for certain that we can build on this lot," said Cindy Preston, Executive Director of Habitat for Humanity Barry County, underscoring the importance of the upcoming zoning decision.
+
+Looking Ahead
+
+Once approvals are secured, Habitat for Humanity Barry County plans to hold a groundbreaking ceremony to officially launch construction. Community members, volunteers, and supporters will be watching closely as the zoning appeals process unfolds over the coming weeks.
+
+For a family that has weathered hardship and uncertainty, the promise of a stable, permanent home represents more than just four walls — it's a fresh start built by a community that came together to make it possible.
+
+Habitat for Humanity Barry County will share updates on the zoning process and groundbreaking timeline as they become available.`,
+  },
 
   {
     slug: "building-better-dinner-2026",
