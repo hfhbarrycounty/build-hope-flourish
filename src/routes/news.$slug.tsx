@@ -62,7 +62,7 @@ function NewsArticlePage() {
           src={item.image}
           alt={item.title}
           className="h-full w-full object-cover"
-          style={{ objectPosition: "center 30%" }}
+          style={{ objectPosition: "center 22%" }}
           width={1920}
           height={1080}
         />
