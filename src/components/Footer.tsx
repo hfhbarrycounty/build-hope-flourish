@@ -1,4 +1,4 @@
-in the footer, change the created by to iFixTech Solutions. Code is attached, resend the full code snippet updated import { Link } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import headerLogo from "../assets/header-logo.jpg";
 import equalHousingLogo from "../assets/equal-housing-opportunity.png";
