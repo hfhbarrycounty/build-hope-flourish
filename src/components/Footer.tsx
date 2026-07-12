@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+in the footer, change the created by to iFixTech Solutions. Code is attached, resend the full code snippet updated import { Link } from "@tanstack/react-router";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import headerLogo from "../assets/header-logo.jpg";
 import equalHousingLogo from "../assets/equal-housing-opportunity.png";
@@ -39,7 +39,7 @@ export default function Footer() {
               Seeking to put God's love into action, Habitat for Humanity brings people together to build homes, communities and hope.
             </p>
             <div className="flex items-center gap-3">
-              
+              <a
                 href="https://www.facebook.com/Habitat.Barry"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -48,7 +48,7 @@ export default function Footer() {
               >
                 <FacebookIcon className="h-5 w-5" />
               </a>
-              
+              <a
                 href="https://x.com/Habitat_org"
                 target="_blank"
                 rel="noopener noreferrer"
